@@ -5,14 +5,47 @@
  * See: https://www.gatsbyjs.com/docs/use-static-query/
  */
 
-import React from "react"
+import React, { useState, useEffect } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+// import { library, icon } from "@fortawesome/fontawesome-svg-core"
+// import { faCamera } from "@fortawesome/free-brands-svg-icons"
+
 import Header from "./header"
+import Footer from "./footer"
+
 import "./layout.css"
+import "../styles/global.css"
 
 const Layout = ({ children }) => {
+  // デバイス幅を取得
+  const useWindowDimensions = () => {
+    const getWindowDimensions = () => {
+      const { innerWidth: width, innerHeight: height } = window
+      return {
+        width,
+        height,
+      }
+    }
+
+    const [windowDimensions, setWindowDimensions] = useState(
+      getWindowDimensions()
+    )
+    useEffect(() => {
+      const onResize = () => {
+        setWindowDimensions(getWindowDimensions())
+      }
+      window.addEventListener("resize", onResize)
+      return () => window.removeEventListener("resize", onResize)
+    }, [])
+    return windowDimensions
+  }
+  const { width } = useWindowDimensions()
+  //TODO: change 5001 to 481
+  const notSmartphone = width > 501 ? true : false
+
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -24,8 +57,11 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+    <div className="layoutOne">
+      <Header
+        notSmartphone={notSmartphone}
+        siteTitle={data.site.siteMetadata?.title || `Title`}
+      />
       <div
         style={{
           margin: `0 auto`,
@@ -34,15 +70,9 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
-        <footer style={{
-          marginTop: `2rem`
-        }}>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
       </div>
-    </>
+      <Footer />
+    </div>
   )
 }
 
