@@ -1,0 +1,35 @@
+@import "../../styles/global";
+
+.mainContainer {
+    min-height: 90vh;
+    width: 100%;
+    padding: 5%;
+    @include flexBox(center, center, column);
+    background-image: url("../../images/main_background.jpg");
+    background-size: cover;
+    position: relative;
+
+    .mainItemWrapper {
+        width: 75%;
+        height: 70%;
+        z-index: 2;
+        //TODO: delete below
+        // background-color: #000;
+        @include flexBox(center, center, column);
+        .mainHead {
+            h2 {
+                font-size: 2rem;
+                color: $white;
+            }
+        }
+        .mainDescription {
+            p {
+                font-size: 1.2rem;
+                color: $white;
+            }
+        }
+        .mainLinkBox {
+            width: 100%;
+        }
+    }
+}

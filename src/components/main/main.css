@@ -1,0 +1,55 @@
+.mainContainer {
+  min-height: 90vh;
+  width: 100%;
+  padding: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-image: url("../../images/main_background.jpg");
+  background-size: cover;
+  position: relative;
+}
+
+.mainContainer .mainItemWrapper {
+  width: 75%;
+  height: 70%;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.mainContainer .mainItemWrapper .mainHead h2 {
+  font-size: 2rem;
+  color: #fff;
+}
+
+.mainContainer .mainItemWrapper .mainDescription p {
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.mainContainer .mainItemWrapper .mainLinkBox {
+  width: 100%;
+}
+/*# sourceMappingURL=main.css.map */

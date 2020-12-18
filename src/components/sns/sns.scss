@@ -1,0 +1,26 @@
+@import "../../styles/global.scss";
+
+.snsLinkWrapper {
+  height: 70px;
+  margin: 0 auto;
+  @include flexBox();
+  @include widthClamp(150px, 170px, 45%);
+  .snsLinks {
+    @include flexBox();
+    height: 100%;
+    width: 33%;
+    .snsIcons {
+      font-size: 25px;
+      color: $third-color;
+    }
+    .twitter:hover {
+      color: $twitter-color;
+    }
+    .facebook:hover {
+      color: $facebook-color;
+    }
+    .github:hover {
+      color: $github-color;
+    }
+  }
+}

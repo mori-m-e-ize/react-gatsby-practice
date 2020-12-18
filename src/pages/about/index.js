@@ -1,9 +1,15 @@
-import React from 'react';
+import React from "react"
+import Layout from "../../components/layout"
+import About from '../../components/about'
+import './style.css'
 
 export default function AboutPage() {
-    return (
-        <React.Fragment>
-            <h1>This is about page</h1>
-        </React.Fragment>
-    )
+  return (
+    <Layout>
+      <div className="aboutContainer">
+        <h1>This is about page</h1>
+        <About />
+      </div>
+    </Layout>
+  )
 }

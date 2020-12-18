@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,iBAAiB,CAAC;EACd,UAAU,EAAE,KAAK;CACpB",
+    "sources": [
+        "style.scss",
+        "../../styles/global.scss"
+    ],
+    "names": [],
+    "file": "style.css"
+}

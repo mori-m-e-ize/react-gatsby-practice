@@ -63,9 +63,10 @@ export default function HamburgerMenu() {
         className={classes.menuRoot}
       >
         <MenuItem className={classes.menuItems}>
-          <Link to="/about" className="menulinks">
-            About
-          </Link>
+          <Link to="/">Home</Link>
+        </MenuItem>
+        <MenuItem className={classes.menuItems}>
+          <Link to="/about">About</Link>
         </MenuItem>
         <MenuItem className={classes.menuItems}>
           <Link to="/work">Work</Link>

@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 
+import SnsLinks from '../sns'
 import ToTopBtn from './toTopBtn';
 
 // Import FontAwesome
@@ -18,17 +19,7 @@ export default function Footer() {
   return (
     <footer>
       <ToTopBtn />
-      <div className="footWrapper">
-        <Link to="https://twitter.com/masadev123" className="footLinks">
-          <FontAwesomeIcon className="footIcons twitter" icon={["fab", "twitter"]} />
-        </Link>
-        <Link to="https://ja-jp.facebook.com/" className="footLinks">
-          <FontAwesomeIcon className="footIcons facebook" icon={["fab", "facebook"]} />
-        </Link>
-        <Link to="https://www.linkedin.com/login/ja" className="footLinks">
-          <FontAwesomeIcon className="footIcons github" icon={["fab", "github"]} />
-        </Link>
-      </div>
+      <SnsLinks />
       <div className="copyright">
         <p>© Copyright 2020 Designed by Masafumi Mori</p>
       </div>
