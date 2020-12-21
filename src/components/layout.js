@@ -13,7 +13,7 @@ import Header from "./header"
 import Footer from "./footer"
 
 import "./layout.css"
-import "../styles/global.css"
+import "src/styles/global.scss"
 
 const Layout = ({ children }) => {
   // デバイス幅を取得

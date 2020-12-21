@@ -4,7 +4,7 @@ import Button from "@material-ui/core/Button"
 import { grey } from "@material-ui/core/colors"
 import GetAppIcon from "@material-ui/icons/GetApp"
 
-import "./about.css"
+import "./about.scss"
 
 export default function About() {
   const ColorButton = withStyles(theme => ({
@@ -48,6 +48,7 @@ export default function About() {
         <GetAppIcon />
         Download Resume
       </ColorButton>
+      <div style={{width: 100, height: "10vh"}}></div>
     </div>
   )
 }

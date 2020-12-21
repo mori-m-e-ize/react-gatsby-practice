@@ -7,21 +7,22 @@
     @include flexBox(center, center, column);
     background-color: $white;
     .aboutItems {
-        width: 90%;
-        margin-bottom: 30px;
-        h2 {
-            margin: 15px 0;
-            color: $third-color;
+      width: 90%;
+      margin-bottom: 30px;
+      h2 {
+        margin: 15px 0;
+        color: $third-color;
+      }
+      p {
+        color: $black;
+      }
+      ul {
+        list-style: none;
+        li {
+          margin: 5px 0;
+          color: $black;
         }
-        p {
-            color: $black;
-        }
-        ul {
-            list-style: none;
-            li {
-                margin: 5px 0;
-                color: $black;
-            }
-        }
+      }
     }
-}
+  }
+  

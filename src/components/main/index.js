@@ -1,10 +1,12 @@
 import React from "react"
 import SnsLinks from "../sns"
 
-import "./main.css"
+import "./main.scss"
 
 export default function Main() {
-  const linkColor = "white"
+
+  const setColor = "white";
+  
   return (
     <div className="mainContainer">
       <div className="mainItemWrapper">
@@ -18,7 +20,7 @@ export default function Main() {
           </p>
         </div>
         <div className="mainLinkBox">
-          <SnsLinks setColor={linkColor} />
+          <SnsLinks setColor={setColor} />
         </div>
       </div>
     </div>

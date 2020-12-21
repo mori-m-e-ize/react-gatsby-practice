@@ -6,6 +6,7 @@ import Image from "../components/image"
 import SEO from "../components/seo"
 import Main from "../components/main"
 import About from '../components/about'
+import Work from '../components/work'
 
 const IndexPage = () => (
   <Layout>
@@ -15,7 +16,7 @@ const IndexPage = () => (
     </div> */}
     <Main sectionTitle="ダミータイトル" />
     <About />
-    <Main sectionTitle="ダミータイトル" />
+    <Work />
     <Main sectionTitle="ダミータイトル" />
     <Main sectionTitle="ダミータイトル" />
   </Layout>
