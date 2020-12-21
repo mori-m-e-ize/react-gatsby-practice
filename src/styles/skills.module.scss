@@ -1,0 +1,41 @@
+@import "./global.scss";
+
+.skillContainer {
+  width: 100%;
+  min-height: 100vh;
+  color: $third-color;
+  @include flexBox(start, center, column);
+  padding: 15% 0 10%;
+  .sectionTitle {
+    font-size: 1.2rem;
+    letter-spacing: 0.2rem;
+    color: $bg-dark;
+    &::after {
+      display: block;
+      content: "";
+      width: 100%;
+      height: 2px;
+      border-bottom: 3px solid $second-color;
+    }
+  }
+}
+
+.skillItems {
+  width: 100%;
+  margin: 20px 0;
+  @include flexBox() {
+    flex-wrap: wrap;
+  }
+  .eachSkills {
+    width: 50%;
+    margin: 10px 0;
+    @include flexBox(center, center, column);
+    .logos {
+      width: 200px;
+    }
+    .skillNames {
+      text-align: center;
+      color: $bg-dark;
+    }
+  }
+}

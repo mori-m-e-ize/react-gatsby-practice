@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "components/layout"
 
-import './style.scss'
+import "./style.scss"
 
 export default function contactPage() {
   return (
