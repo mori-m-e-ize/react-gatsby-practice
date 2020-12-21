@@ -17,7 +17,6 @@ export default function FormItem(props) {
   }
 
   const handleSubmit = e => {
-    console.log("submit")
     e.preventDefault()
     const form = e.target
     fetch("/", {
@@ -37,12 +36,12 @@ export default function FormItem(props) {
       className={Style.form}
       name="contact"
       method="post"
-      action="/work/"
+      action="/success.html"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
-      onSubmit={handleSubmit}
+      // onSubmit={handleSubmit}
     >
-      <input type="hidden" name="form-nanme" value="contact" />
+      <input type="hidden" name="form-name" value="contact" />
       <Input
         inputType={"text"}
         placeholder={"Enter your name"}
@@ -67,7 +66,7 @@ export default function FormItem(props) {
         id={"message"}
         label={"Message"}
       />
-      <SubmitButton type="submit"/>
+      <SubmitButton onClick={handleSubmit}/>
     </form>
   )
 }

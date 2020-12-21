@@ -1,5 +1,4 @@
 import React from "react"
-import { graphql } from "gatsby"
 import WorkItems from "../Molecules/WorkItems"
 import { useMarkdownRemark } from "./useMarkdownRemark"
 

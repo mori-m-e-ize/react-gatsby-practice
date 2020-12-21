@@ -1,11 +1,10 @@
 import React from "react"
-import { Link } from "gatsby"
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import Main from "../components/main"
-import About from '../components/about'
-import Work from '../components/work'
+import Layout from "components/layout"
+import SEO from "components/seo"
+import Main from "components/main"
+import About from 'components/about'
+import Work from 'components/work'
 import Skill from 'components/skills'
 import ContactForm from 'components/contactform'
 
