@@ -2,4 +2,10 @@
 
 .contactContainer {
     min-height: 100vh;
+    background-color: $bg-dark;
+    color: $white;
+    h2 {
+        text-align: center;
+        padding: 20px 0;
+    }
 }

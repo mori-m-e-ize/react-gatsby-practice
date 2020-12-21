@@ -7,20 +7,18 @@ import Main from "../components/main"
 import About from '../components/about'
 import Work from '../components/work'
 import Skill from 'components/skills'
+import ContactForm from 'components/contactform'
 
-import JavaLogo from 'images/Java.png';
 
 
 const IndexPage = (props) => (
   <Layout>
     <SEO title="Home" />
-    {/* <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div> */}
     <Main sectionTitle="ダミータイトル" />
     <About />
     <Work />
     <Skill />
+    <ContactForm />
   </Layout>
 )
 
