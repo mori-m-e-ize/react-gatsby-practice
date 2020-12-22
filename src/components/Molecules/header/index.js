@@ -25,7 +25,7 @@ export default function Header(props) {
           </Link>
         </div>
         <HamburgerMenu className={Style.hamburgerIcon} />
-        <nav className={props.notSmartphone ? "showNavbar" : ""}>
+        <nav className={props.notSmartphone ? Style.showNavbar : "none"}>
           <Link to="/about" className={Style.navLinks}>
             About
           </Link>
