@@ -12,11 +12,18 @@ header {
     height: 100%;
     position: relative;
     .logo {
-      width: 30%;
+      width: 40%;
+      padding-left: 2%;
+      a {
+        width: 100%;
+        text-decoration: none;
+        color: $black;
+        font-weight: 700;
+      }
     }
     .hamburger {
       position: absolute;
-      right: 30px;
+      right: 5%;
       &:hover {
         cursor: pointer;
       }
@@ -37,9 +44,6 @@ header {
     nav.showNavbar {
       display: block;
       width: 50%;
-      @include forDesktop() {
-        width: 40%;
-      }
       height: 100%;
       margin-left: auto;
       .navLinks {
@@ -51,6 +55,7 @@ header {
         text-decoration: none;
         text-align: center;
         line-height: 15vh;
+        font-weight: 700;
         &:hover {
           cursor: pointer;
           background: $bg-dark;

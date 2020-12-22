@@ -14,12 +14,6 @@ export default function Header(props) {
           {/* <img style={{ width: "50px" }} src="../images/logo.png" /> */}
           <Link
             to="/"
-            style={{
-              textDecoration: "none",
-              color: "#333",
-              fontWeight: "700",
-              paddingLeft: "20px",
-            }}
           >
             {props.siteTitle}
           </Link>

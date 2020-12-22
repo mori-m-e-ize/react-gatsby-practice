@@ -1,11 +1,15 @@
 @import "styles/global.module.scss";
 
 .aboutContainer {
-    min-height: 70vh;
-    width: 100%;
-    padding-top: 10%;
+  min-height: 70vh;
+  width: 100%;
+  padding-top: 10%;
+  background-color: $white;
+  @include flexBox(center, center, column);
+
+  .aboutItemContainer {
     @include flexBox(center, center, column);
-    background-color: $white;
+    width: 100%;
     .aboutItems {
       width: 90%;
       margin-bottom: 30px;
@@ -24,5 +28,25 @@
         }
       }
     }
+    @include forDesktop() {
+      width: 90%;
+      @include flexBox(space-around, flex-start, row);
+      .aboutItems {
+        width: 45%;
+      }
+    }
+  }
+  .downloadBtn {
+    font-weight: 700;
+    letter-spacing: 0;
+    @include flexBox();
+
+    @include forTablet(){
+      width: 40%;
+    }
+    @include forDesktop(){
+      width: 30%;
+    }
   }
   
+}

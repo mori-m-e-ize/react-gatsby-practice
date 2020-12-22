@@ -12,6 +12,9 @@
     .snsIcons {
       font-size: 25px;
       color: $third-color;
+      @include forTablet(){
+        font-size: 30px;
+      }
     }
     .twitter:hover {
       color: $twitter-color;
