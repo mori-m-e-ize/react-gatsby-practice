@@ -7,6 +7,8 @@ import { grey } from "@material-ui/core/colors"
 
 import { Link } from "gatsby"
 
+import Style from "styles/header.module.scss"
+
 const useStyles = makeStyles({
   menuRoot: {
     position: "relative",
@@ -47,7 +49,7 @@ export default function HamburgerMenu() {
   }
 
   return (
-    <div className="hamburger">
+    <div className={Style.hamburger}>
       <MenuOpenIcon
         style={{ fontSize: 40, color: "322e18" }}
         aria-controls="hamburger-menu"

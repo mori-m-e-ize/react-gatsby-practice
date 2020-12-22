@@ -3,13 +3,13 @@ import React from "react"
 
 import HamburgerMenu from "./hamburgerMenu"
 
-import "./header.scss"
+import Style from "styles/header.module.scss"
 
 export default function Header(props) {
   return (
     <header>
-      <div className="headWrapper">
-        <div className="logo">
+      <div className={Style.headWrapper}>
+        <div className={Style.logo}>
           {/*TODO: Need to modify here */}
           {/* <img style={{ width: "50px" }} src="../images/logo.png" /> */}
           <Link
@@ -24,15 +24,15 @@ export default function Header(props) {
             {props.siteTitle}
           </Link>
         </div>
-        <HamburgerMenu className="hamburgerIcon" />
+        <HamburgerMenu className={Style.hamburgerIcon} />
         <nav className={props.notSmartphone ? "showNavbar" : ""}>
-          <Link to="/about" className="navLinks">
+          <Link to="/about" className={Style.navLinks}>
             About
           </Link>
-          <Link to="/work" className="navLinks">
+          <Link to="/work" className={Style.navLinks}>
             Work
           </Link>
-          <Link to="/contact" className="navLinks">
+          <Link to="/contact" className={Style.navLinks}>
             Contact
           </Link>
         </nav>

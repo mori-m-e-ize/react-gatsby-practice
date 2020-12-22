@@ -7,31 +7,31 @@ import { library } from "@fortawesome/fontawesome-svg-core"
 import { fas } from "@fortawesome/free-solid-svg-icons"
 import { fab } from "@fortawesome/free-brands-svg-icons"
 
-import "./sns.scss"
+import Style from "styles/snsLink.module.scss"
 
 export default function SnsLinks({ setColor }) {
   // Load FontAwesome
   library.add(fas, fab)
 
   return (
-    <div className="snsLinkWrapper">
-      <Link to="https://twitter.com/masadev123" className="snsLinks">
+    <div className={Style.snsLinkWrapper}>
+      <Link to="https://twitter.com/masadev123" className={Style.snsLinks}>
         <FontAwesomeIcon
-          className="snsIcons twitter"
+          className={`${Style.snsIcons} ${Style.twitter}`}
           icon={["fab", "twitter"]}
           style={{ color: setColor }}
         />
       </Link>
-      <Link to="https://ja-jp.facebook.com/" className="snsLinks">
+      <Link to="https://ja-jp.facebook.com/" className={Style.snsLinks}>
         <FontAwesomeIcon
-          className="snsIcons facebook"
+          className={`${Style.snsIcons} ${Style.facebook}`}
           icon={["fab", "facebook"]}
           style={{ color: setColor }}
         />
       </Link>
-      <Link to="https://www.linkedin.com/login/ja" className="snsLinks">
+      <Link to="https://www.linkedin.com/login/ja" className={Style.snsLinks}>
         <FontAwesomeIcon
-          className="snsIcons github"
+          className={`${Style.snsIcons} ${Style.github}`}
           icon={["fab", "github"]}
           style={{ color: setColor }}
         />

@@ -2,18 +2,16 @@ import React from "react"
 
 import Layout from "components/layout"
 import SEO from "components/seo"
-import Main from "components/main"
-import About from 'components/about'
-import Work from 'components/work'
-import Skill from 'components/skills'
-import ContactForm from 'components/contactform'
-
-
+import Top from "components/Molecules/top"
+import About from 'components/Molecules/about'
+import Work from 'components/Molecules/work'
+import Skill from 'components/Molecules/skills'
+import ContactForm from 'components/Molecules/contactform'
 
 const IndexPage = (props) => (
   <Layout>
     <SEO title="Home" />
-    <Main sectionTitle="ダミータイトル" />
+    <Top />
     <About />
     <Work />
     <Skill />

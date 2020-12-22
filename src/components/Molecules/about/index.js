@@ -4,7 +4,7 @@ import Button from "@material-ui/core/Button"
 import { grey } from "@material-ui/core/colors"
 import GetAppIcon from "@material-ui/icons/GetApp"
 
-import "./about.scss"
+import Style from "styles/about.module.scss"
 
 export default function About() {
   const ColorButton = withStyles(theme => ({
@@ -22,8 +22,8 @@ export default function About() {
   }))(Button);
 
   return (
-    <div className="aboutContainer">
-      <div className="aboutItems">
+    <div className={Style.aboutContainer}>
+      <div className={Style.aboutItems}>
         <h2>About Me</h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
@@ -36,7 +36,7 @@ export default function About() {
           vestibulum dictum.
         </p>
       </div>
-      <div className="aboutItems">
+      <div className={Style.aboutItems}>
         <h2>Contact Details</h2>
         <ul>
           <li>Masafumi Mori</li>
@@ -44,8 +44,8 @@ export default function About() {
           <li>m.mori@e-ize.jp</li>
         </ul>
       </div>
-      <ColorButton className="downloadBtn">
-        <GetAppIcon />
+      <ColorButton className={Style.downloadBtn}>
+        <GetAppIcon style={{ marginRight: "5px"}}/>
         Download Resume
       </ColorButton>
       <div style={{width: 100, height: "10vh"}}></div>

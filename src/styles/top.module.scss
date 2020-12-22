@@ -1,32 +1,32 @@
-@import "src/styles/global";
+@import "styles/global.module.scss";
 
-.mainContainer {
+.topContainer {
   min-height: 90vh;
   width: 100%;
   padding: 5%;
   @include flexBox(center, center, column);
-  background-image: url("../../images/main_background.jpg");
+  background-image: url("images/main_background.jpg");
   background-size: cover;
   position: relative;
 
-  .mainItemWrapper {
+  .topItemWrapper {
     width: 75%;
     height: 70%;
     z-index: 2;
     @include flexBox(center, center, column);
-    .mainHead {
+    .topHead {
       h2 {
         font-size: 2rem;
         color: $white;
       }
     }
-    .mainDescription {
+    .topDescription {
       p {
         font-size: 1.2rem;
         color: $white;
       }
     }
-    .mainLinkBox {
+    .topLinkBox {
       width: 100%;
     }
   }

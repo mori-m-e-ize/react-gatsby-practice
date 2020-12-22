@@ -1,5 +1,5 @@
 import React from "react"
-import WorkItems from "../Molecules/WorkItems"
+import WorkItems from "components/Molecules/workItems"
 import { useMarkdownRemark } from "./useMarkdownRemark"
 
 import Style from "styles/work.module.scss"

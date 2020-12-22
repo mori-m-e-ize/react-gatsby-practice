@@ -6,7 +6,7 @@ import { library } from "@fortawesome/fontawesome-svg-core"
 import { fas } from "@fortawesome/free-solid-svg-icons"
 import { fab } from "@fortawesome/free-brands-svg-icons"
 
-import "./footer.scss"
+import Style from "styles/footer.module.scss"
 
 export default function ToTopBtn() {
   const handleClick = () => {
@@ -17,8 +17,11 @@ export default function ToTopBtn() {
   library.add(fas, fab)
 
   return (
-    <div className="toTopBtn" onClick={handleClick}>
-      <FontAwesomeIcon className="topBtnIcon" icon={["fas", "chevron-up"]} />
+    <div className={Style.toTopBtn} onClick={handleClick}>
+      <FontAwesomeIcon
+        className={Style.topBtnIcon}
+        icon={["fas", "chevron-up"]}
+      />
     </div>
   )
 }

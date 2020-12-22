@@ -1,14 +1,12 @@
-
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import useWindowDimensions from "./useWindowDimensions"
 
-import Header from "./header"
-import Footer from "./footer"
+import Header from "components/Molecules/header"
+import Footer from "components/Molecules/footer"
 
-import "./layout.css"
-import "src/styles/global.scss"
+import Style from "styles/global.module.scss"
 
 const Layout = ({ children }) => {
   let notSmartphone = false
@@ -52,7 +50,7 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <div className="layoutOne">
+    <div className={Style.layoutOne}>
       <Header
         notSmartphone={notSmartphone}
         siteTitle={data.site.siteMetadata?.title || `Title`}
