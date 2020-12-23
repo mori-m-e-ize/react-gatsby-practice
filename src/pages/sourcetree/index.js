@@ -8,7 +8,7 @@ export default function sourceTreePage() {
   return (
     <Layout>
       <div className={Style.workContainer}>
-        <h2>This is sourcetree page</h2>
+        <h2>This is SOURCETREE page</h2>
         <Work />
       </div>
     </Layout>
