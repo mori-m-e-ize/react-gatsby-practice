@@ -11,17 +11,19 @@ export default function Work() {
   return (
     <div className={Style.workContainer}>
       <h2 className={Style.sectionTitle}>WORK</h2>
-      {/*　Work情報を取得してループで格納
+      <div className={Style.workItemBox}>
+        {/*　Work情報を取得してループで格納
        データ追加時は、work-XXX.mdファイルを作成*/}
-      {data.map(({ frontmatter }) => (
-        <WorkItems
-          workTitle={frontmatter.title}
-          workDate={frontmatter.date}
-          workPosition={frontmatter.position}
-          workDescription={frontmatter.description}
-          key={frontmatter}
-        />
-      ))}
+        {data.map(({ frontmatter }) => (
+          <WorkItems
+            workTitle={frontmatter.title}
+            workDate={frontmatter.date}
+            workPosition={frontmatter.position}
+            workDescription={frontmatter.description}
+            key={frontmatter}
+          />
+        ))}
+      </div>
     </div>
   )
 }

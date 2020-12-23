@@ -1,12 +1,7 @@
 @import "styles/global.module.scss";
 
 .aboutContainer {
-  min-height: 70vh;
-  width: 100%;
-  padding-top: 10%;
-  background-color: $white;
-  @include flexBox(center, center, column);
-
+  @include forContainers($white, $black, 100%, 10% 0);
   .aboutItemContainer {
     @include flexBox(center, center, column);
     width: 100%;
@@ -41,12 +36,11 @@
     letter-spacing: 0;
     @include flexBox();
 
-    @include forTablet(){
+    @include forTablet() {
       width: 40%;
     }
-    @include forDesktop(){
+    @include forDesktop() {
       width: 30%;
     }
   }
-  
 }

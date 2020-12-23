@@ -1,41 +1,49 @@
 @import "styles/global.module.scss";
 
 .skillContainer {
-  width: 100%;
-  min-height: 100vh;
-  color: $third-color;
-  @include flexBox(start, center, column);
-  padding: 15% 0 10%;
+  @include forContainers($white, $third-color, 95%, 15% 0 10%) {
+    margin: 0 auto;
+    @include flexBox(start, center, column);
+  }
   .sectionTitle {
-    font-size: 1.2rem;
-    letter-spacing: 0.2rem;
-    color: $bg-dark;
-    &::after {
-      display: block;
-      content: "";
-      width: 100%;
-      height: 2px;
-      border-bottom: 3px solid $second-color;
+    @include sectionTitle() {
+      color: $bg-dark;
     }
   }
 }
 
+// Molecules/skillItems
 .skillItems {
   width: 100%;
   margin: 20px 0;
+  max-width: 980px;
   @include flexBox() {
     flex-wrap: wrap;
   }
   .eachSkills {
     width: 50%;
-    margin: 10px 0;
+    margin: 10px 0 20px;
     @include flexBox(center, center, column);
     .logos {
       width: 200px;
+      @include forTablet() {
+        width: 250px;
+      }
+      @include forDesktop() {
+        width: 280px;
+      }
     }
     .skillNames {
       text-align: center;
       color: $bg-dark;
+      @include forTablet() {
+        font-size: 1.5rem;
+      }
+    }
+
+    @include forDesktop() {
+      width: 33%;
+      margin: 30px 0;
     }
   }
 }

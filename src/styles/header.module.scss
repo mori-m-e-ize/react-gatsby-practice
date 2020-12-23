@@ -5,6 +5,8 @@ header {
     height: 15vh;
   }
   height: 10vh;
+  min-height: 80px;
+  max-height: 150px;
   background: $bg-light;
   color: $black;
   .headWrapper {
@@ -46,16 +48,16 @@ header {
       width: 50%;
       height: 100%;
       margin-left: auto;
+      @include flexBox();
       .navLinks {
         width: 33%;
         height: 100%;
         font-size: clamp(15px, 18px, 20px);
-        display: inline-block;
         color: $black;
         text-decoration: none;
         text-align: center;
-        line-height: 15vh;
         font-weight: 700;
+        @include flexBox();
         &:hover {
           cursor: pointer;
           background: $bg-dark;

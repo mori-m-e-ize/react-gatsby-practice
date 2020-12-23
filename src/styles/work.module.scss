@@ -1,49 +1,79 @@
 @import "styles/global.module.scss";
 
 .workContainer {
-    background-color: $bg-dark;
-    width: 100%;
-    // delete below
-    min-height: 100vh;
-    color: $white;
+  @include forContainers($bg-dark, $white, 100%, 10% 0 15%) {
     @include flexBox(start, center, column);
-    padding: 15% 0 10%;
-    .sectionTitle {
-        font-size: 1.2rem;
-        letter-spacing: 0.2rem;
-        &::after {
-            display: block;
-            content: "";
-            width: 100%;
-            height: 2px;
-            border-bottom: 3px solid $second-color;
-        }
+  }
+  .sectionTitle {
+    @include sectionTitle();
+  }
+  .workItemBox {
+    width: 100%;
+    @include flexBox(center, center, column);
+  }
+
+  // For Desktop
+  @include forDesktop() {
+    padding: 10% 0;
+    .workItemBox {
+      width: 90%;
+      @include flexBox(start, center, row);
+      padding-top: 30px;
     }
+  }
 }
 
 // For workitems
 .workItems {
-    width: 90%;
-    margin: 30px 0 20px;
-    @include flexBox(center, center, column);
-    .workTitle {
-        font-size: 1.8rem;
+  width: 90%;
+  margin: 30px 0 20px;
+  @include flexBox(center, center, column);
+  .workTitle {
+    font-size: 1.8rem;
+  }
+  .positionAndDate {
+    width: 80%;
+    margin-top: 20px;
+    @include flexBox(space-around, flex-end, row);
+    .position {
+      font-size: 1.2rem;
+      font-style: italic;
+      font-weight: 400;
     }
+    .date {
+      font-size: 0.9rem;
+    }
+  }
+  .decription {
+    margin: 20px 0;
+    padding: 0 5%;
+    color: $bg-light;
+  }
+
+  //FOr tablet
+  @include forTablet() {
+    width: 85%;
     .positionAndDate {
-        width: 60%;
-        @include flexBox(space-around, flex-end, row);
-        .position {
-            font-size: 1.2rem;
-            font-style: italic;
-            font-weight: 400;
-        }
-        .date {
-            // font-size: 1.1rem;
-        }
+      width: 50%;
     }
-    .decription {
-        margin: 20px 0;
-        padding: 0 5%;
-        color: $bg-light;
+  }
+
+  // For desktop
+  @include forDesktop() {
+    width: 50%;
+    margin-top: 20px;
+    padding: 0 15px;
+    .positionAndDate {
+      width: 50%;
+      @include flexBox(space-around, flex-end, row);
+      .position {
+        font-size: 1.2rem;
+        font-style: italic;
+        font-weight: 400;
+      }
+      .date {
+        font-size: 0.9rem;
+      }
     }
+  }
 }

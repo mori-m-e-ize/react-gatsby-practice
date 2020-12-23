@@ -10,7 +10,7 @@ function WorkItems(props) {
         <h4 className={Style.position}>{props.workPosition}</h4>
         <p className={Style.date}>{props.workDate}</p>
       </div>
-        <p className={Style.decription}>{props.workDescription}</p>
+      <p className={Style.decription}>{props.workDescription}</p>
     </div>
   )
 }

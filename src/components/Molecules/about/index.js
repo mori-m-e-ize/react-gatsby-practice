@@ -50,7 +50,6 @@ export default function About() {
         <GetAppIcon style={{ marginRight: "5px" }} />
         Download Resume
       </ColorButton>
-      <div style={{ width: 100, height: "10vh" }}></div>
     </div>
   )
 }

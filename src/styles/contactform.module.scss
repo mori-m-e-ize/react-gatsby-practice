@@ -1,44 +1,43 @@
 @import "styles/global.module.scss";
 
 .contactContainer {
-  width: 100%;
-  min-height: 50vh;
-  background-color: $bg-dark;
-  color: $white;
-  @include flexBox(center, center, column);
-  padding: 15% 0 10%;
+  @include forContainers($bg-dark, $white, 100%, 10% 0) {
+    @include flexBox(center, center, column);
+  }
   .sectionTitle {
-    font-size: 1.2rem;
-    letter-spacing: 0.2rem;
-    &::after {
-      display: block;
-      content: "";
-      width: 100%;
-      height: 2px;
-      border-bottom: 3px solid $second-color;
-    }
+    @include sectionTitle();
   }
 }
 
-// For form component
+// For form component in Molecules/formItem
 .form {
-    width: 80%;
-    margin: 30px 0 20px;
-    @include flexBox(center, center, column);
+  width: 80%;
+  margin: 30px 0 20px;
+  @include flexBox(center, center, column);
+  max-width: 820px;
 }
 
-// For input items/ textarea
-.inputItems, .textItem {
+// For input items/ textarea in Atoms/input
+.inputItems,
+.textItem {
+  width: 100%;
+  margin: 10px 0;
+  .inputLabel {
+    display: block;
+    margin-bottom: 10px;
+  }
+  .input,
+  .textarea {
     width: 100%;
-    margin: 10px 0;
-    .inputLabel {
-        display: block;
-        margin-bottom: 10px;
-    }
-    .input, .textarea {
-        width: 100%;
-        padding: 15px;
-        margin: 5px auto 10px;
-    }
+    padding: 15px;
+    margin: 5px auto 10px;
+  }
 
+  @include forTablet() {
+    width: 80%;
+    .input,
+    .textarea {
+      padding: 20px;
+    }
+  }
 }

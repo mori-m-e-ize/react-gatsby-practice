@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap");
 
 // Color variables
 $bg-light: #cfccd6;
@@ -12,6 +12,7 @@ $twitter-color: #00acee;
 $facebook-color: #3b5998;
 $github-color: #171515;
 
+// display: flexに対応
 @mixin flexBox($justify: center, $align: center, $direction: row) {
   display: flex;
   justify-content: $justify;
@@ -20,55 +21,77 @@ $github-color: #171515;
   @content;
 }
 
-@mixin widthClamp($min: 50px, $mid: 50%, $max: 100%){
+// for container wrappers
+@mixin forContainers(
+  $bg-color: $bg-dark,
+  $color: $white,
+  $width: 100%,
+  $p: 10% 0
+) {
+  background-color: $bg-color;
+  color: $color;
+  width: $width;
+  padding: $p;
+  @include flexBox(center, center, column);
+  @content;
+}
+
+@mixin widthClamp($min: 50px, $mid: 50%, $max: 100%) {
   width: clamp($min, $mid, $max);
 }
 
-@mixin heightClamp($min: 50px, $mid: 50%, $max: 100%){
+@mixin heightClamp($min: 50px, $mid: 50%, $max: 100%) {
   height: clamp($min, $mid, $max);
 }
 
-@mixin linkHover($bg-color: #fff, $text: #333){
-    cursor: pointer;
-    background-color: invert($bg-color);
-    color: invert($text);
-    @content;
+@mixin linkHover($bg-color: #fff, $text: #333) {
+  cursor: pointer;
+  background-color: invert($bg-color);
+  color: invert($text);
+  @content;
 }
 
 // Media query for desktop/tablet side
-@mixin forDesktop(){
+@mixin forDesktop() {
   @media screen and (min-width: 769px) {
     @content;
   }
 }
 // Media query for tablets/smartphone side
-@mixin forTablet(){
+@mixin forTablet() {
   //TODO: Change 501 to 481
   @media screen and (min-width: 501px) {
     @content;
   }
 }
 
-// For section title on the top page
-.sectionTitle {
+// For section titles
+@mixin sectionTitle() {
   font-size: 1.2rem;
   letter-spacing: 0.2rem;
+  margin-bottom: 20px;
   &::after {
-      display: block;
-      content: "";
-      width: 100%;
-      height: 2px;
-      border-bottom: 3px solid $second-color;
+    display: block;
+    content: "";
+    width: 100%;
+    height: 2px;
+    border-bottom: 3px solid $second-color;
   }
+  @include forTablet() {
+    font-size: 1.5rem;
+  }
+  @include forDesktop() {
+    font-size: 1.8rem;
+  }
+  @content;
 }
-
 
 // Common css
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
 }
 body {
   min-height: 100vh;
