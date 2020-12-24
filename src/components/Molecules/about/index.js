@@ -11,9 +11,7 @@ export default function About() {
     root: {
       color: theme.palette.getContrastText(grey[500]),
       backgroundColor: grey[500],
-      width: "50%",
-      height: 50,
-      margin: 20,
+      margin: 0,
       "&:hover": {
         backgroundColor: grey[900],
         color: theme.palette.getContrastText(grey[900]),
@@ -46,10 +44,15 @@ export default function About() {
           </ul>
         </div>
       </div>
-      <ColorButton className={Style.downloadBtn}>
-        <GetAppIcon style={{ marginRight: "5px" }} />
-        Download Resume
-      </ColorButton>
+      <a
+        className={Style.resumeBtn}
+        href="https://gitconnected.com/masafumimori/resume"
+      >
+        <ColorButton className={Style.downloadBtn}>
+          <GetAppIcon style={{ marginRight: "5px" }} />
+          Download Resume
+        </ColorButton>
+      </a>
     </div>
   )
 }
