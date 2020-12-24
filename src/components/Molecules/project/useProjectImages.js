@@ -1,20 +1,24 @@
 import { useStaticQuery, graphql } from "gatsby"
 
-const useLogos = () => {
+const useProjectImage = () => {
   const data = useStaticQuery(graphql`
     query {
       allFile(
-        filter: { extension: { eq: "png" } }
         sort: { fields: name, order: ASC }
+        filter: {
+          extension: { eq: "jpg" }
+          base: { nin: "main_background.jpg" }
+        }
       ) {
         edges {
           node {
-            name
             childImageSharp {
               fluid {
-                ...GatsbyImageSharpFluid
+                src
               }
             }
+            name
+            id
           }
         }
       }
@@ -24,4 +28,4 @@ const useLogos = () => {
   return data.allFile.edges
 }
 
-export default useLogos
+export default useProjectImage
