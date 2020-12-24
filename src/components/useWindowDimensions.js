@@ -1,9 +1,7 @@
 import { useState, useEffect } from "react"
 
 export default function useWindowDimensions() {
-  const [windowDimensions, setWindowDimensions] = useState(
-    {}
-  )
+  const [windowDimensions, setWindowDimensions] = useState({})
 
   useEffect(() => {
     const getWindowDimensions = () => {
@@ -13,6 +11,9 @@ export default function useWindowDimensions() {
         height,
       }
     }
+
+    //TODO: 初期表示のため追加
+    setWindowDimensions(getWindowDimensions())
 
     const onResize = () => {
       setWindowDimensions(getWindowDimensions())

@@ -9,7 +9,7 @@ import Footer from "components/Molecules/footer"
 import Style from "styles/global.module.scss"
 
 const Layout = ({ children }) => {
-  let notSmartphone = false
+  let notSmartphone = null
   const { width } = useWindowDimensions()
   notSmartphone = width > 501 ? true : false
 
