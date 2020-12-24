@@ -9,6 +9,7 @@
   }
   .workItemBox {
     width: 100%;
+    max-width: 921px;
     @include flexBox(center, center, column);
   }
 

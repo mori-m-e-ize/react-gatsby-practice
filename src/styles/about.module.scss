@@ -5,6 +5,7 @@
   .aboutItemContainer {
     @include flexBox(center, center, column);
     width: 100%;
+    max-width: 920px;
     .aboutItems {
       width: 90%;
       margin-bottom: 30px;
