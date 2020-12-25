@@ -21,7 +21,11 @@ export default function ProjectPage({ data }) {
               className={Style.htmlContent}
               dangerouslySetInnerHTML={{ __html: node.html }}
             />
-            <img className={Style.projectImage} src={node.frontmatter.image} />
+            <img
+              className={Style.projectImage}
+              src={node.frontmatter.image}
+              alt={node.frontmatter.name}
+            />
           </div>
         ))}
       </div>

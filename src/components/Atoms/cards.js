@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React from "react"
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos"
 import { Link } from "gatsby"
 
@@ -8,7 +8,11 @@ export default function Card(props) {
   return (
     <>
       <Link to={props.link} className={Style.cards}>
-        <img src={props.bgImagePath} className={Style.projectImage} />
+        <img
+          src={props.bgImagePath}
+          className={Style.projectImage}
+          alt="project images"
+        />
         <div className={Style.projectContent}>
           <h3 className={Style.projectName}>{props.projectName}</h3>
           <div className={Style.hoverBox}>
