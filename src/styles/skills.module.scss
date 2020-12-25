@@ -3,7 +3,7 @@
 .skillContainer {
   @include forContainers($white, $third-color, 95%, 15% 0 10%) {
     margin: 0 auto;
-    @include flexBox(start, center, column);
+    @include flexBox(flex-start, center, column);
   }
   .sectionTitle {
     @include sectionTitle() {

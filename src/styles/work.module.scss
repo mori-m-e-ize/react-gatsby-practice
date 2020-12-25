@@ -2,7 +2,7 @@
 
 .workContainer {
   @include forContainers($bg-dark, $white, 100%, 10% 0 15%) {
-    @include flexBox(start, center, column);
+    @include flexBox(flex-start, center, column);
   }
   .sectionTitle {
     @include sectionTitle();
@@ -18,7 +18,7 @@
     padding: 10% 0;
     .workItemBox {
       width: 90%;
-      @include flexBox(start, center, row);
+      @include flexBox(flex-start, center, row);
       padding-top: 30px;
     }
   }

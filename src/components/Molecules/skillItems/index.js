@@ -11,8 +11,8 @@ export default function SkillItems(props) {
   return (
     <div className={Style.skillItems}>
       {images.map(({ node }) => (
-        <div className={Style.eachSkills}>
-          <Img fluid={node.childImageSharp.fluid} className={Style.logos}/>
+        <div className={Style.eachSkills} key={node.id}>
+          <Img fluid={node.childImageSharp.fluid} className={Style.logos} />
           <h3 className={Style.skillNames}>{node.name}</h3>
         </div>
       ))}

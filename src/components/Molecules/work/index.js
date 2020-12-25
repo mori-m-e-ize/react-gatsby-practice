@@ -14,13 +14,13 @@ export default function Work() {
       <div className={Style.workItemBox}>
         {/*　Work情報を取得してループで格納
        データ追加時は、work-XXX.mdファイルを作成*/}
-        {data.map(({ frontmatter }) => (
+        {data.map(({ frontmatter, id }) => (
           <WorkItems
             workTitle={frontmatter.title}
             workDate={frontmatter.date}
             workPosition={frontmatter.position}
             workDescription={frontmatter.description}
-            key={frontmatter}
+            key={id}
           />
         ))}
       </div>

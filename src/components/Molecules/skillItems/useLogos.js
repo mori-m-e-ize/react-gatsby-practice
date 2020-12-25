@@ -15,6 +15,7 @@ const useLogos = () => {
                 ...GatsbyImageSharpFluid
               }
             }
+            id
           }
         }
       }

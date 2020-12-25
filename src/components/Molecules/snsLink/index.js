@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 
 // Import FontAwesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -15,27 +14,27 @@ export default function SnsLinks({ setColor }) {
 
   return (
     <div className={Style.snsLinkWrapper}>
-      <Link to="https://twitter.com/masadev123" className={Style.snsLinks}>
+      <a href="https://twitter.com/masadev123" className={Style.snsLinks}>
         <FontAwesomeIcon
           className={`${Style.snsIcons} ${Style.twitter}`}
           icon={["fab", "twitter"]}
           style={{ color: setColor }}
         />
-      </Link>
-      <Link to="https://ja-jp.facebook.com/" className={Style.snsLinks}>
+      </a>
+      <a href="https://ja-jp.facebook.com/" className={Style.snsLinks}>
         <FontAwesomeIcon
           className={`${Style.snsIcons} ${Style.facebook}`}
           icon={["fab", "facebook"]}
           style={{ color: setColor }}
         />
-      </Link>
-      <Link to="https://www.linkedin.com/login/ja" className={Style.snsLinks}>
+      </a>
+      <a href="https://www.linkedin.com/login/ja" className={Style.snsLinks}>
         <FontAwesomeIcon
           className={`${Style.snsIcons} ${Style.github}`}
           icon={["fab", "github"]}
           style={{ color: setColor }}
         />
-      </Link>
+      </a>
     </div>
   )
 }
