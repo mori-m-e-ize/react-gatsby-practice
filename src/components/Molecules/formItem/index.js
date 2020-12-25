@@ -8,8 +8,7 @@ import SubmitButton from "components/Atoms/submitButton"
 import Style from "styles/contactform.module.scss"
 
 export default function FormItem(props) {
-
-  //TODO: Change below 
+  //TODO: Change below
   const [state, setState] = React.useState({})
 
   const handleChange = e => {
@@ -18,16 +17,14 @@ export default function FormItem(props) {
 
   const handleSubmit = e => {
     e.preventDefault()
-    const form = e.target
+    let myForm = document.getElementById("contactform")
+    let formData = new FormData(myForm)
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encodeURI({
-        "form-name": form.getAttribute("name"),
-        ...state,
-      }),
+      body: new URLSearchParams(formData).toString(),
     })
-      .then(() => navigate(form.getAttribute("action")))
+      .then(() => navigate(myForm.getAttribute("action")))
       .catch(error => alert(error))
   }
 
@@ -39,7 +36,7 @@ export default function FormItem(props) {
       action="/success.html"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
-      // onSubmit={handleSubmit}
+      id="contactform"
     >
       <input type="hidden" name="form-name" value="contact" />
       <Input
@@ -66,7 +63,7 @@ export default function FormItem(props) {
         id={"message"}
         label={"Message"}
       />
-      <SubmitButton onClick={handleSubmit}/>
+      <SubmitButton onClick={handleSubmit} />
     </form>
   )
 }
