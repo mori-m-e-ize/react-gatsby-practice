@@ -1,7 +1,7 @@
 ---
 title: "PROJECT 6"
 date: "20XX-XX-XX"
-image: https://cdn.pixabay.com/photo/2014/03/22/22/15/twitter-292988_1280.jpg
+image: "https://cdn.pixabay.com/photo/2014/03/22/22/15/twitter-292988_1280.jpg"
 ---
 
 ##This is Project 6.

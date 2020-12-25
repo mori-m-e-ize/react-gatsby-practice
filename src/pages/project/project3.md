@@ -1,7 +1,7 @@
 ---
 title: "PROJECT 3"
 date: "20XX-XX-XX"
-image: https://images.unsplash.com/photo-1483653364400-eedcfb9f1f88?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80
+image: "https://images.unsplash.com/photo-1483653364400-eedcfb9f1f88?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
 ---
 
 ##This is Project 3.
