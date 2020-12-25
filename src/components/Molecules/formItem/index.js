@@ -8,13 +8,6 @@ import SubmitButton from "components/Atoms/submitButton"
 import Style from "styles/contactform.module.scss"
 
 export default function FormItem(props) {
-  //TODO: Change below
-  const [state, setState] = React.useState({})
-
-  const handleChange = e => {
-    setState({ ...state, [e.target.name]: e.target.value })
-  }
-
   const handleSubmit = e => {
     e.preventDefault()
     let myForm = document.getElementById("contactform")
@@ -44,7 +37,6 @@ export default function FormItem(props) {
         placeholder={"Enter your name"}
         id={"name"}
         label={"Name"}
-        onChange={handleChange}
       />
       <Input
         inputType={"email"}
