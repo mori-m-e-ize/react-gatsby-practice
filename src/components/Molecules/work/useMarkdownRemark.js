@@ -3,8 +3,11 @@ import { useStaticQuery, graphql } from "gatsby"
 export const useMarkdownRemark = () => {
   const { allMarkdownRemark } = useStaticQuery(
     graphql`
-      query workHistory {
-        allMarkdownRemark(sort: {order: ASC, fields: frontmatter___date}) {
+      query {
+        allMarkdownRemark(
+          filter: { fields: { slug: { regex: "/work/" } } }
+          sort: { order: ASC, fields: frontmatter___date }
+        ) {
           nodes {
             frontmatter {
               date
@@ -12,6 +15,7 @@ export const useMarkdownRemark = () => {
               title
               description
             }
+            id
           }
         }
       }

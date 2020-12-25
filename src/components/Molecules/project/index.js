@@ -2,22 +2,23 @@ import React from "react"
 import Card from "components/Atoms/cards"
 import Style from "styles/project.module.scss"
 
-import useProjectImage from "./useProjectImages"
+import { useProject } from "./useProject"
 
 export default function Project(props) {
-  const projectImages = useProjectImage()
+  // // プロジェクトの画像と情報取得
+  const data = useProject()
 
-  console.log(projectImages)
   return (
     <div className={Style.projectContainer}>
-      <h2 className={Style.sectionTitle}>Projects</h2>
+      <h2 className={Style.sectionTitle}>PROJECTS</h2>
       <div className={Style.projectItemContainer}>
         {/* ループでデータを取得 */}
-        {projectImages.map(({ node }) => (
+        {data.map(({ node }) => (
           <Card
             key={node.id}
-            bgImagePath={node.childImageSharp.fluid.src}
-            projectName={node.name}
+            bgImagePath={node.frontmatter.image}
+            projectName={node.frontmatter.title}
+            link={node.fields.slug}
           />
         ))}
       </div>
