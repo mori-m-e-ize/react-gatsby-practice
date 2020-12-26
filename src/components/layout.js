@@ -13,32 +13,6 @@ const Layout = ({ children }) => {
   const { width } = useWindowDimensions()
   notSmartphone = width > 501 ? true : false
 
-  // // デバイス幅を取得
-  // const useWindowDimensions = () => {
-  //   const getWindowDimensions = () => {
-  //     const { innerWidth: width, innerHeight: height } = window
-  //     return {
-  //       width,
-  //       height,
-  //     }
-  //   }
-
-  //   const [windowDimensions, setWindowDimensions] = useState(
-  //     getWindowDimensions()
-  //   )
-  //   useEffect(() => {
-  //     const onResize = () => {
-  //       setWindowDimensions(getWindowDimensions())
-  //     }
-  //     window.addEventListener("resize", onResize)
-  //     return () => window.removeEventListener("resize", onResize)
-  //   }, [])
-  //   return windowDimensions
-  // }
-  // const { width } = useWindowDimensions()
-  // //TODO: change 501 to 481
-  // notSmartphone = width > 501 ? true : false
-
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {

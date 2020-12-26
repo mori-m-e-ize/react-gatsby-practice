@@ -7,6 +7,7 @@ import GetAppIcon from "@material-ui/icons/GetApp"
 import Style from "styles/about.module.scss"
 
 export default function About() {
+  //　カスタムボタンの作成
   const ColorButton = withStyles(theme => ({
     root: {
       color: theme.palette.getContrastText(grey[500]),

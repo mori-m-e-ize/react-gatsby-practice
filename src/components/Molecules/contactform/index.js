@@ -1,15 +1,14 @@
 import React from "react"
 
-import FormItem from 'components/Molecules/formItem'
+import FormItem from "components/Molecules/formItem"
 
-import Style from 'styles/contactform.module.scss'
+import Style from "styles/contactform.module.scss"
 
-export default function ContactForm(props) {
-
+export default function ContactForm() {
   return (
-      <div className={Style.contactContainer}>
-          <h2 className={Style.sectionTitle}>CONTACT</h2>
-          <FormItem />
-      </div>
+    <div className={Style.contactContainer}>
+      <h2 className={Style.sectionTitle}>CONTACT</h2>
+      <FormItem />
+    </div>
   )
 }

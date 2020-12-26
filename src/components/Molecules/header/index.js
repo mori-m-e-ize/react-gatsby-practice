@@ -10,13 +10,8 @@ export default function Header(props) {
     <header>
       <div className={Style.headWrapper}>
         <div className={Style.logo}>
-          {/*TODO: Need to modify here */}
-          {/* <img style={{ width: "50px" }} src="../images/logo.png" /> */}
-          <Link
-            to="/"
-          >
-            {props.siteTitle}
-          </Link>
+          {/*　ロゴがあれば以下に挿入 */}
+          <Link to="/">{props.siteTitle}</Link>
         </div>
         <HamburgerMenu className={Style.hamburgerIcon} />
         <nav className={props.notSmartphone ? Style.showNavbar : "none"}>

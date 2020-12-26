@@ -4,7 +4,6 @@ import { makeStyles } from "@material-ui/core/styles"
 import SendIcon from "@material-ui/icons/Send"
 
 const useStyles = makeStyles(theme => ({
-  //TODO: Change style
   button: {
     margin: theme.spacing(1),
     width: "80%",

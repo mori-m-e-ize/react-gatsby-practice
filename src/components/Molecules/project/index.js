@@ -5,7 +5,7 @@ import Style from "styles/project.module.scss"
 import { useProject } from "./useProject"
 
 export default function Project(props) {
-  // // プロジェクトの画像と情報取得
+  // プロジェクトの画像と情報取得
   const data = useProject()
 
   return (

@@ -5,7 +5,7 @@ import Img from "gatsby-image"
 
 import Style from "styles/skills.module.scss"
 
-export default function SkillItems(props) {
+export default function SkillItems() {
   const images = useLogos()
 
   return (

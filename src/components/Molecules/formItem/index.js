@@ -1,5 +1,4 @@
 import React from "react"
-import { navigate } from "gatsby-link"
 
 import Input from "components/Atoms/input"
 import TextArea from "components/Atoms/textArea"

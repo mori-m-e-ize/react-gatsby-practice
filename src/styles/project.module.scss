@@ -23,7 +23,7 @@
     width: 90%;
     max-width: 921px;
     z-index: 2;
-    margin-top: 20px;
+    margin-top: 40px;
     @include flexBox(flex-start, center, column);
 
     // タブレット以上の画面幅のサイズ

@@ -12,7 +12,7 @@ export default function useWindowDimensions() {
       }
     }
 
-    //TODO: 初期表示のため追加
+    // ナビゲーションの初期表示
     setWindowDimensions(getWindowDimensions())
 
     const onResize = () => {
