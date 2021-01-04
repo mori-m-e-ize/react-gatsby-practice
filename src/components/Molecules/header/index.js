@@ -6,6 +6,14 @@ import HamburgerMenu from "./hamburgerMenu"
 import Style from "styles/header.module.scss"
 
 export default function Header(props) {
+  const activeStylesWhite = {
+    backgroundColor: "#fff",
+    color: "#333",
+  }
+  const activeStylesDark = {
+    backgroundColor: "#322E18",
+    color: "#CFCCD6",
+  }
   return (
     <header>
       <div className={Style.headWrapper}>
@@ -15,13 +23,25 @@ export default function Header(props) {
         </div>
         <HamburgerMenu className={Style.hamburgerIcon} />
         <nav className={props.notSmartphone ? Style.showNavbar : "none"}>
-          <Link to="/about" className={Style.navLinks}>
+          <Link
+            to="/about"
+            className={Style.navLinks}
+            activeStyle={activeStylesWhite}
+          >
             About
           </Link>
-          <Link to="/work" className={Style.navLinks}>
+          <Link
+            to="/work"
+            className={Style.navLinks}
+            activeStyle={activeStylesDark}
+          >
             Work
           </Link>
-          <Link to="/contact" className={Style.navLinks}>
+          <Link
+            to="/contact"
+            className={Style.navLinks}
+            activeStyle={activeStylesWhite}
+          >
             Contact
           </Link>
         </nav>
