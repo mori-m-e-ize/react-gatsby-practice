@@ -1,15 +1,31 @@
 @import "styles/global.module.scss";
 
 .skillContainer {
-  @include forContainers($white, $third-color, 100%, 15% 0 10%) {
+  @include forContainers($white, $third-color, 100%, 0 0 10%) {
     margin: 0 auto;
     @include flexBox(flex-start, center, column);
   }
   position: relative;
+  &::before {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 110px;
+    background: $white;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    @include forDesktop() {
+      height: 150px;
+    }
+  }
   .sectionTitle {
     @include sectionTitle() {
       color: $bg-dark;
     }
+    position: sticky;
+    top: 5%;
+    z-index: 6;
   }
 }
 
@@ -18,6 +34,7 @@
   width: 100%;
   margin: 20px 0;
   max-width: 980px;
+  position: relative;
   @include flexBox() {
     flex-wrap: wrap;
   }

@@ -1,7 +1,7 @@
 @import "styles/global.module.scss";
 
 .contactContainer {
-  @include forContainers($bg-dark, $white, 100%, 10% 0) {
+  @include forContainers($white, $bg-dark, 100%, 10% 0) {
     @include flexBox(center, center, column);
   }
   position: relative;
