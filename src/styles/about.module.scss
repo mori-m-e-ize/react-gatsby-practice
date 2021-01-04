@@ -2,6 +2,7 @@
 
 .aboutContainer {
   @include forContainers($white, $black, 100%, 10% 0);
+  height: 100vh;
   position: sticky;
   top: 0;
   .aboutItemContainer {
