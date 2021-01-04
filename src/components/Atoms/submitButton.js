@@ -9,11 +9,11 @@ const useStyles = makeStyles(theme => ({
     width: "80%",
     height: "60px",
     fontWeight: "bold",
-    backgroundColor: "#000",
-    color: "#fff",
+    backgroundColor: "#CFCCD6",
+    color: "#333",
     "&:hover": {
-      backgroundColor: "#fff",
-      color: "#000",
+      backgroundColor: "#322E18",
+      color: "#fff",
     },
   },
 }))
