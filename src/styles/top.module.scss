@@ -6,7 +6,8 @@
   padding: 5%;
   background-image: url("images/main_background.jpg");
   background-size: cover;
-  position: relative;
+  position: sticky;
+  top: 0;
   @include flexBox(center, center, column);
   @include forTablet() {
     background-position: bottom;

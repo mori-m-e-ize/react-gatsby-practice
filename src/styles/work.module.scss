@@ -4,6 +4,9 @@
   @include forContainers($bg-dark, $white, 100%, 10% 0 15%) {
     @include flexBox(flex-start, center, column);
   }
+  position: sticky;
+  top: 0;
+
   .sectionTitle {
     @include sectionTitle();
   }

@@ -4,6 +4,7 @@
   @include forContainers($bg-dark, $white, 100%, 10% 0) {
     @include flexBox(center, center, column);
   }
+  position: relative;
   .sectionTitle {
     @include sectionTitle();
   }

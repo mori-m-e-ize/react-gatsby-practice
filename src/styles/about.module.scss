@@ -2,6 +2,8 @@
 
 .aboutContainer {
   @include forContainers($white, $black, 100%, 10% 0);
+  position: sticky;
+  top: 0;
   .aboutItemContainer {
     @include flexBox(center, center, column);
     width: 100%;
